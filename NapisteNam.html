@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Formular</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="node_modules/bootswatch/dist/solar/bootstrap.min.css"></script>
+</head>
+
+
+<body>
+   <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Brm Brm</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+        aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="NapisteNam.html">Napište nám</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="MultiCulti.html">Formulář</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="container mt-5">
+      <div class="row justify-content/center">
+        <div class="col-md-6">
+          <div class="card shadow">
+            <div class="card-body p-4">
+              <h2 class="text-center mb-4">Zpráva</h2>
+
+              <!-- Formulář (action a method uprav podle toho, kam chceš data odesílat, např. do PHP skriptu) -->
+              <form action="odeslat.php" method="POST">
+
+                <!-- E-mailová adresa -->
+                <div class="mb-3">
+                  <label for="email" class="form-label">Vaše e-mailová adresa</label>
+                  <input type="email" class="form-label form-control" id="email" name="email"
+                    placeholder="jmeno@example.cz" required>
+                </div>
+
+                <!-- Velké textové pole (Textarea) -->
+                <div class="mb-3">
+                  <label for="zprava" class="form-label">Vaše zpráva</label>
+                  <textarea class="form-control" id="zprava" name="zprava" rows="5"
+                    placeholder="Sem napište svůj text..." required></textarea>
+                </div>
+
+                <!-- Tlačítko pro odeslání -->
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary btn-lg">Odeslat zprávu</button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+</div>
+</body>
+
+</html>
