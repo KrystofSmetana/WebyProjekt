@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="node_modules/bootswatch/dist/solar/bootstrap.min.css"></script>
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/solar/bootstrap.min.css">
 </head>
 
 
@@ -39,65 +39,45 @@
             <div class="col-md-6">
                 <div class="card shadow">
                     <div class="card-body p-4">
-                        <h2 class="text-center mb-4">Multi Select Formulář</h2>
+                        <h2 class="text-center mb-4">Pracovní Formulář</h2>
 
                         <form id="contactForm" action="odeslat.php" method="POST">
 
-                            <!-- E-mailová adresa -->
+
                             <div class="mb-3">
-                                <label for="email" class="form-label">Vaše e-mailová adresa</label>
+                                <label for="email" class="form-label">Vaše Jméno</label>
                                 <input type="email" class="form-control" id="email" name="email"
-                                    placeholder="jmeno@example.cz" required>
+                                    placeholder="např... Karel Novák" required>
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label">Vyberte možnosti (zvolte alespoň jednu):</label>
-                                <div class="border p-3 rounded bg-white">
+                                <label class="form-label">Jaké jazyky ovládáte (zvolte alespoň jednu):</label>
 
-                                    <div class="form-check">
-                                        <input class="form-check-input option-checkbox" type="checkbox" name="vyber[]"
-                                            value="volba1" id="volba1">
-                                        <label class="form-check-label" for="volba1">
-                                            První možnost
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input option-checkbox" type="checkbox" name="vyber[]"
-                                            value="volba2" id="volba2">
-                                        <label class="form-check-label" for="volba2">
-                                            Druhá možnost
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input option-checkbox" type="checkbox" name="vyber[]"
-                                            value="volba3" id="volba3">
-                                        <label class="form-check-label" for="volba3">
-                                            Třetí možnost
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input option-checkbox" type="checkbox" name="vyber[]"
-                                            value="volba4" id="volba4">
-                                        <label class="form-check-label" for="volba4">
-                                            Čtvrtá možnost
-                                        </label>
-                                    </div>
 
-                                </div>
+                                <select id="zanry" name="zanry[]" class="form-select" multiple required>
+                                    <!-- Neodeslatelná a zakázaná výchozí volba -->
+                                    <option value="" disabled selected>vyberte...</option>
+                                    <option value="sci-fi">Němčinu</option>
+                                    <option value="detektivka">Angličtinu</option>
+                                    <option value="historie">Ruštinu</option>
+                                    <option value="biografie">Japonštinu</option>
+                                </select>
+
                                 <div id="checkboxError" class="text-danger mt-1"
                                     style="display: none; font-size: 0.875em;">
                                     Vyberte prosím alespoň jednu možnost.
                                 </div>
                             </div>
+                            <div class="form-text">Pro výběr více položek podržte klávesu Ctrl (nebo Cmd na Macu).</div>
 
                             <div class="mb-3">
-                                <label for="zprava" class="form-label">Vaše zpráva</label>
+                                <label for="zprava" class="form-label">Co můžete nabýdnout naší firmě?</label>
                                 <textarea class="form-control" id="zprava" name="zprava" rows="5"
-                                    placeholder="Sem napište svůj text..." required></textarea>
+                                    placeholder="Sem napište své důvody..." required></textarea>
                             </div>
 
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-primary btn-lg">Odeslat zprávu</button>
+                                <button type="submit" class="btn btn-primary btn-lg">Odeslat formulář</button>
                             </div>
 
                         </form>
@@ -107,27 +87,6 @@
         </div>
     </div>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-
-            const checkboxes = document.querySelectorAll('.option-checkbox');
-            const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
-            const errorDiv = document.getElementById('checkboxError');
-
-
-            if (checkedCount === 0) {
-                event.preventDefault();
-                errorDiv.style.display = 'block';
-            } else {
-                errorDiv.style.display = 'none';
-            }
-        });
-    </script>
-</body>
-
-</html>
-
-</body>
 
 </html>
 </body>

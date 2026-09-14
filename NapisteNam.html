@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="node_modules/bootswatch/dist/solar/bootstrap.min.css"></script>
+  <link rel="stylesheet" href="node_modules/bootswatch/dist/solar/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/tom-select/dist/js/tom-select.complete.min.js">
 </head>
 
 
@@ -36,38 +37,39 @@
       </div>
     </div>
   </nav>
+  <div class="container">
 
-  <div class="container-fluid">
-    <div class="container mt-5">
-      <div class="row justify-content/center">
-        <div class="col-md-6">
-          <div class="card shadow">
-            <div class="card-body p-4">
-              <h2 class="text-center mb-4">Zpráva</h2>
-
-
-              <form action="odeslat.php" method="POST">
+    <div class="container-fluid">
+      <div class="container mt-5">
+        <div class="row justify-content/center">
+          <div class="col-md-6">
+            <div class="card shadow">
+              <div class="card-body p-4">
+                <h2 class="text-center mb-4">Zpráva</h2>
 
 
-                <div class="mb-3">
-                  <label for="email" class="form-label">Vaše e-mailová adresa</label>
-                  <input type="email" class="form-label form-control" id="email" name="email"
-                    placeholder="jmeno@example.cz" required>
-                </div>
+                <form action="odeslat.php" method="POST">
 
 
-                <div class="mb-3">
-                  <label for="zprava" class="form-label">Vaše zpráva</label>
-                  <textarea class="form-control" id="zprava" name="zprava" rows="5"
-                    placeholder="Sem napište svůj text..." required></textarea>
-                </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Vaše e-mailová adresa</label>
+                    <input type="email" class="form-label form-control" id="email" name="email"
+                      placeholder="jmeno@example.cz" required>
+                  </div>
 
-                
-                <div class="d-grid">
-                  <button type="summit" class="btn btn-primary btn-lg">Odeslat zprávu</button>
-                </div>
 
-              </form>
+                  <div class="mb-3">
+                    <label for="zprava" class="form-label">Vaše zpráva</label>
+                    <textarea class="form-control" id="zprava" name="zprava" rows="5"
+                      placeholder="Sem napište svůj text..." required></textarea>
+                  </div>
+
+
+                  <div class="d-grid">
+                    <button type="summit" class="btn btn-primary btn-lg">Odeslat zprávu</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
