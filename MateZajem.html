@@ -13,9 +13,9 @@
 
 
 <body>
-<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Brm Brm</a>
+      <a class="navbar-brand" href="#">Luxury Autos</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
         aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,15 +23,13 @@
       <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home
-              <span class="visually-hidden">(current)</span>
-            </a>
+            <a class="nav-link active" href="index.html">Nabýdka</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="NapisteNam.html">Napište nám</a>
+            <a class="nav-link" href="MateZajem.html">Máte zájem?</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="MultiCulti.html">Formulář</a>
+            <a class="nav-link" href="Prace.html">Nabíráme</a>
           </li>
         </ul>
       </div>
@@ -43,19 +41,29 @@
       <div class="col-md-6">
         <div class="card shadow">
           <div class="card-body p-4">
-            <h2 class="text-center mb-4">Zpráva</h2>
+            <h2 class="text-center mb-4">Chcete fáro?</h2>
 
             <form action="odeslat.php" method="POST">
               <div class="mb-3">
                 <label for="email" class="form-label">Vaše e-mailová adresa</label>
-                <input type="email" class="form-control" id="email" name="email"
-                  placeholder="jmeno@example.cz" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="jmeno@example.cz"
+                  required>
               </div>
-
+              <select id="zanry" name="zanry[]" class="form-select" required>
+                <!-- Neodeslatelná a zakázaná výchozí volba -->
+                <option value="" disabled selected>vyberte...</option>
+                <option value="RX-7">RX-7</option>
+                <option value="RX-7 LME">RX-7 Le Mans Edition</option>
+                <option value="Red Bull">RB21</option>
+                <option value="AMG">AMG GT</option>
+                <option value="Camaro">Camaro RS</option>
+                <option value="F-22">F-22 Raptor</option>
+                <option value="P1">P1</option>
+              </select>
               <div class="mb-3">
                 <label for="zprava" class="form-label">Vaše zpráva</label>
-                <textarea class="form-control" id="zprava" name="zprava" rows="5"
-                  placeholder="Sem napište svůj text..." required></textarea>
+                <textarea class="form-control" id="zprava" name="zprava" rows="5" placeholder="Sem napište svůj text..."
+                  required></textarea>
               </div>
 
               <div class="d-grid">
@@ -68,4 +76,5 @@
     </div>
   </div>
 </body>
+
 </html>
